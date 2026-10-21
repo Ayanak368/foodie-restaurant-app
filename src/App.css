@@ -1,0 +1,317 @@
+
+/* General */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fffaf4;
+  color: #30231d;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.website {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: #fffaf4;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo span,
+.footer span {
+  color: #e96e2c;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #66564c;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: #e96e2c;
+}
+
+.cart-button {
+  padding: 12px 22px;
+  background: #e96e2c;
+  color: white;
+  border-radius: 25px;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 70px 7%;
+  background: #fff0df;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.tagline {
+  color: #e96e2c;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #e96e2c;
+}
+
+.hero-description {
+  color: #74655b;
+  line-height: 1.8;
+  max-width: 430px;
+}
+
+.primary-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: #e96e2c;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.primary-button:hover,
+.cart-button:hover {
+  background: #c95319;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Popular dishes */
+.popular {
+  padding: 70px 7%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  margin: 10px 0;
+}
+
+.view-menu {
+  color: #e96e2c;
+  font-weight: bold;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.food-card {
+  background: white;
+  border: 1px solid #f1e7dc;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+}
+
+.food-card > img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.food-info {
+  padding: 18px;
+}
+
+.food-category {
+  color: #e96e2c;
+  font-size: 12px;
+}
+
+.food-info h3 {
+  margin: 8px 0 15px;
+}
+
+.food-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add-button {
+  width: 38px;
+  height: 38px;
+  background: #e96e2c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 35px 7%;
+  background: #30231d;
+  color: white;
+}
+
+.footer h2 {
+  font-size: 28px;
+}
+
+.footer p {
+  color: #e8d8cb;
+  font-size: 14px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 45px 5%;
+    gap: 30px;
+  }
+
+  .hero-image {
+    max-width: none;
+  }
+
+  .hero-image img {
+    height: 260px;
+  }
+
+  .popular {
+    padding: 45px 5%;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+}
+
+
+.menu-page {
+  padding-top: 50px;
+  min-height: 70vh;
+}
+
+.menu-search {
+  width: 100%;
+  max-width: 420px;
+  padding: 13px 16px;
+  margin: 25px 0 20px;
+  border: 1px solid #ead8c8;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.menu-search:focus {
+  border-color: #e87524;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.category-btn {
+  padding: 10px 18px;
+  border: 1px solid #ead8c8;
+  border-radius: 22px;
+  background: white;
+  color: #493023;
+  cursor: pointer;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: #e87524;
+  border-color: #e87524;
+  color: white;
+}
+
+.empty-message {
+  padding: 30px 0;
+  color: #795b49;
+}
+
