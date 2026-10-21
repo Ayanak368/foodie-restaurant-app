@@ -1,7 +1,5 @@
 
-* {
-  box-sizing: border-box;
-}
+@import "tailwindcss";
 
 html {
   scroll-behavior: smooth;
@@ -9,10 +7,5 @@ html {
 
 body {
   margin: 0;
-}
-
-button,
-input,
-textarea {
-  font: inherit;
+  font-family: Arial, sans-serif;
 }
