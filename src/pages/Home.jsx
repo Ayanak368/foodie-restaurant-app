@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import foods from "../data/foods";
+import FoodCard from "../components/FoodCard";
 
 // 👉 Swap this URL for any image you like (a local import also works)
 const HERO_IMAGE =

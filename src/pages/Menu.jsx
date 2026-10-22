@@ -2,6 +2,7 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import foods from "../data/foods";
+import FoodCard from "../components/FoodCard";
 
 function Menu() {
   const { addToCart } = useContext(CartContext);
@@ -93,15 +94,15 @@ function Menu() {
                 </p>
 
 
-<button
-  onClick={() => {
-    addToCart(food);
-    setMessage(`${food.name} added successfully!`);
-  }}
-  aria-label={`Add ${food.name} to cart`}
-  className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-2xl text-white transition hover:bg-orange-700"
->
-  +
+             <button
+                onClick={() => {
+                 addToCart(food);
+                 setMessage(`${food.name} added successfully!`);
+                 }}
+                aria-label={`Add ${food.name} to cart`}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-2xl text-white transition hover:bg-orange-700"
+              >
+                +
 </button>
 
               </div>
