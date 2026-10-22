@@ -54,23 +54,7 @@ function About() {
         </div>
       </section>
 
-      {/* Call to action */}
-      <section className="bg-orange-600 px-6 py-14 text-center">
-        <h2 className="mb-4 text-3xl font-bold text-white">
-          Discover your next favourite meal
-        </h2>
 
-        <p className="mb-7 text-orange-50">
-          Explore our menu and find something delicious.
-        </p>
-
-        <Link
-          to="/menu"
-          className="inline-block rounded-full bg-white px-8 py-3 font-bold text-orange-700 transition hover:bg-orange-50"
-        >
-          Explore Menu →
-        </Link>
-      </section>
     </main>
   );
 }
